@@ -1,0 +1,52 @@
+# === Python / Django ===
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.log
+*.pot
+*.mo
+*.db
+*.sqlite3
+
+# Local environment variables
+.env
+*.env
+
+# Django-specific
+db.sqlite3
+media/
+staticfiles/
+static/
+
+# Django migration files (optional)
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+
+# VS Code settings
+.vscode/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Tox
+.tox/
+
+# MyPy
+.mypy_cache/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Git merge conflicts
+*.orig

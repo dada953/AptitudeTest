@@ -1,22 +1,13 @@
-# from django.apps import AppConfig
-
-
-# class AppConfig(AppConfig):
-#     default_auto_field = 'django.db.models.BigAutoField'
-#     name = 'app'
-
-
-
+import os
 from django.apps import AppConfig
 from django.db.models.signals import post_migrate
-import os
+
 
 class MainConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'app'
+    name = 'main'  # your app name here
 
     def ready(self):
-        from django.conf import settings
         from django.contrib.auth import get_user_model
 
         def create_superuser(sender, **kwargs):
@@ -27,9 +18,9 @@ class MainConfig(AppConfig):
                 password = os.environ.get('SUPERUSER_PASSWORD', 'admin123')
 
                 if not User.objects.filter(username=username).exists():
-                    print("Creating superuser...")
-                    User.objects.create_superuser(username, email, password)
+                    print("🔑 Creating superuser...")
+                    User.objects.create_superuser(username=username, email=email, password=password)
                 else:
-                    print("Superuser already exists.")
+                    print("✅ Superuser already exists.")
 
         post_migrate.connect(create_superuser, sender=self)

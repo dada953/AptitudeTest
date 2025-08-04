@@ -162,6 +162,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:9000",
     "http://192.168.21.57:5153",
     "https://45215fa55882.ngrok-free.app",
+    "https://aptitude-test-ashy.vercel.app",
 ]
 
 AUTH_USER_MODEL = 'app.CustomUser'

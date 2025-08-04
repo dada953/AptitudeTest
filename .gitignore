@@ -6,16 +6,15 @@ __pycache__/
 *.log
 *.pot
 *.mo
-*.db
-*.sqlite3
+
 
 # Local environment variables
 .env
 *.env
 
 # Django-specific
-db.sqlite3
-media/
+
+
 staticfiles/
 static/
 

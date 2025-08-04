@@ -23,7 +23,7 @@ const LoginPage = () => {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:8000/api/login/', {
+      const response = await fetch('https://aptitudetest-q2h6.onrender.com/api/login/', {
       // const response = await fetch('https://cab643f7d9fb.ngrok-free.app/api/login/', {
 
         method: 'POST',

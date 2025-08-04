@@ -322,7 +322,7 @@ export default function Dashboard() {
     const fetchUserProfile = async () => {
       try {
         const token = localStorage.getItem("access");
-        const response = await axios.get("http://localhost:8000/api/profile", {
+        const response = await axios.get("https://aptitudetest-q2h6.onrender.com/api/profile", {
           headers: { Authorization: `Bearer ${token}` }
         });
         setUser(response.data);
@@ -339,7 +339,7 @@ export default function Dashboard() {
     const fetchChartData = async () => {
       try {
         const token = localStorage.getItem("access");
-        const response = await axios.get("http://127.0.0.1:8000/api/piechart/", {
+        const response = await axios.get("https://aptitudetest-q2h6.onrender.com/api/piechart/", {
           headers: { Authorization: `Bearer ${token}` }
         });
         setChartData(response.data);
@@ -361,7 +361,7 @@ export default function Dashboard() {
 
       const token = localStorage.getItem("access");
       const response = await axios.get(
-        `http://localhost:8000/api/results/${day}/`,
+        `https://aptitudetest-q2h6.onrender.com/api/results/${day}/`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -384,7 +384,7 @@ export default function Dashboard() {
         form.append("profile_image", formData.profile_image);
       }
 
-      const response = await axios.put("http://localhost:8000/api/update_profile/", form, {
+      const response = await axios.put("https://aptitudetest-q2h6.onrender.com/api/update_profile/", form, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
@@ -414,7 +414,7 @@ export default function Dashboard() {
         <div className="bg-white rounded-2xl p-6 shadow-lg space-y-4 animate-fade-in-up">
           <div className="flex flex-col items-center">
             <img
-              src={user?.profile_image ? `http://localhost:8000${user.profile_image}` : profilePic}
+              src={user?.profile_image ? `https://aptitudetest-q2h6.onrender.com${user.profile_image}` : profilePic}
               alt="Profile"
               className="rounded-full w-24 h-24 border-4 border-blue-400 shadow"
             />

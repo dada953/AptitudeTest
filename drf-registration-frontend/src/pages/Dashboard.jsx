@@ -19,7 +19,7 @@ function Dashboard() {
       return;
     }
 
-    axios.get('http://localhost:8000/api/aptitude_questions/', {
+    axios.get('https://aptitudetest-q2h6.onrender.com/api/aptitude_questions/', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => {
@@ -50,7 +50,7 @@ function Dashboard() {
 
     try {
       const res = await axios.post(
-        'http://localhost:8000/api/submit_answers/',
+        'https://aptitudetest-q2h6.onrender.com/api/submit_answers/',
         { answers },
         {
           headers: {

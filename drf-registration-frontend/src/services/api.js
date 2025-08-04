@@ -1,7 +1,7 @@
 // src/services/api.js
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000/api'; // change this if your backend is running elsewhere
+const API_BASE_URL = 'https://aptitudetest-q2h6.onrender.com/api'; // change this if your backend is running elsewhere
 
 export const registerUser = (formData) => {
   return axios.post(`${API_BASE_URL}/register/`, formData, {
@@ -20,7 +20,7 @@ export const submitAnswers = async (answers) => {
   }
 
   const response = await axios.post(
-    'http://localhost:8000/api/submit-answers/',
+    'https://aptitudetest-q2h6.onrender.com/api/submit-answers/',
     { answers },
     {
       headers: {

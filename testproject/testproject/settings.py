@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-kq@*iwpifa-8*)sjwhv7!w7#ks%15x7gv#(c-t_nkg)dj97tm6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','https://cab643f7d9fb.ngrok-free.app','https://admin.testmate.com','*']
+ALLOWED_HOSTS = ['localhost','https://cab643f7d9fb.ngrok-free.app','https://aptitudetest-q2h6.onrender.com','*']
 
 
 # Application definition

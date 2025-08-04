@@ -5,7 +5,7 @@ from django.db.models.signals import post_migrate
 
 class MainConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'main'  # your app name here
+    name = 'app'  # your app name here
 
     def ready(self):
         from django.contrib.auth import get_user_model
